@@ -9,23 +9,22 @@ I'm clearly not the only one who felt that way, since today, Jan 2nd, [this post
 ## Devtool setup
 
 Rough steps so far:
-- Installed python from apt
-- Installed python3-is-python
 - git tool chain is also whatever I started with
-(TODO: Clean this up and move to mise?)
 
 ## Configs
 - I'm going to put configs in this repo, and then use scripts to help initialize them, which Cursor can just one shot for me.
 
-
 ## Toolchains
 
-For node, trying to use mise:
+For node and python, I'm using mise:
 
 ```
+# install mise (check internet for latest instructions)
 curl https://mise.run | sh
 echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 # Run the symlink linker to put mise.toml in ~/
+./make_symlinks.sh
+
 # Then, run this in this repo's dir
 mise trust
 
