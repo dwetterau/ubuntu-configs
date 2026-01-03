@@ -27,3 +27,5 @@
 - Installed Cursor, started this repo and log
 - Installed Dropbox (manually deb file) to use with KeepassXC (with apt, not snap) for my password manager to work
 - Generated SSH keys, added them to Github
+- Setup a vimrc, made a script to symlink it from homedir properly
+- Setup a mise config for node, python, uv
