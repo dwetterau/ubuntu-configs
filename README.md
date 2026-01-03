@@ -25,7 +25,7 @@ echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 # Run the symlink linker to put mise.toml in ~/
 ./make_symlinks.sh
 
-# Then, run this in this repo's dir
+# Then, run this in ~/
 mise trust
 
 # then, run this once
