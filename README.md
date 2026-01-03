@@ -25,6 +25,12 @@ For node, trying to use mise:
 ```
 curl https://mise.run | sh
 echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
+# Run the symlink linker to put mise.toml in ~/
+# Then, run this in this repo's dir
+mise trust
+
+# then, run this once
+mise install
 ```
 
 

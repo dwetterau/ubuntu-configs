@@ -9,32 +9,41 @@ set -e  # Exit on error
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HOME_DIR="$HOME"
 
-# Create symlink for .vimrc
-VIMRC_REPO="$SCRIPT_DIR/.vimrc"
-VIMRC_HOME="$HOME_DIR/.vimrc"
-
-if [ ! -f "$VIMRC_REPO" ]; then
-    echo "Error: $VIMRC_REPO does not exist in the repo"
-    exit 1
-fi
-
-# Check if ~/.vimrc already exists
-if [ -e "$VIMRC_HOME" ]; then
-    # Check if it's already a symlink to our file
-    if [ -L "$VIMRC_HOME" ] && [ "$(readlink -f "$VIMRC_HOME")" = "$(readlink -f "$VIMRC_REPO")" ]; then
-        echo ".vimrc is already symlinked correctly"
-    else
-        # Backup existing file
-        BACKUP="$VIMRC_HOME.backup.$(date +%Y%m%d_%H%M%S)"
-        echo "Backing up existing .vimrc to $BACKUP"
-        mv "$VIMRC_HOME" "$BACKUP"
-        ln -sf "$VIMRC_REPO" "$VIMRC_HOME"
-        echo "Created symlink: $VIMRC_HOME -> $VIMRC_REPO"
+# Function to create a symlink from repo file to home location
+create_symlink() {
+    local REPO_FILE="$1"
+    local HOME_FILE="$2"
+    local FILE_NAME="$3"
+    
+    if [ ! -f "$REPO_FILE" ]; then
+        echo "Error: $REPO_FILE does not exist in the repo"
+        exit 1
     fi
-else
-    # Create the symlink
-    ln -sf "$VIMRC_REPO" "$VIMRC_HOME"
-    echo "Created symlink: $VIMRC_HOME -> $VIMRC_REPO"
-fi
+    
+    # Check if target already exists
+    if [ -e "$HOME_FILE" ]; then
+        # Check if it's already a symlink to our file
+        if [ -L "$HOME_FILE" ] && [ "$(readlink -f "$HOME_FILE")" = "$(readlink -f "$REPO_FILE")" ]; then
+            echo "$FILE_NAME is already symlinked correctly"
+        else
+            # Backup existing file
+            BACKUP="$HOME_FILE.backup.$(date +%Y%m%d_%H%M%S)"
+            echo "Backing up existing $FILE_NAME to $BACKUP"
+            mv "$HOME_FILE" "$BACKUP"
+            ln -sf "$REPO_FILE" "$HOME_FILE"
+            echo "Created symlink: $HOME_FILE -> $REPO_FILE"
+        fi
+    else
+        # Create the symlink
+        ln -sf "$REPO_FILE" "$HOME_FILE"
+        echo "Created symlink: $HOME_FILE -> $REPO_FILE"
+    fi
+}
+
+# Create symlink for .vimrc
+create_symlink "$SCRIPT_DIR/.vimrc" "$HOME_DIR/.vimrc" ".vimrc"
+
+# Create symlink for mise.toml
+create_symlink "$SCRIPT_DIR/mise.toml" "$HOME_DIR/mise.toml" "mise.toml"
 
 echo "Symlink setup complete!"

@@ -1,0 +1,10 @@
+[tools]
+# Use the latest Active LTS Node release for stability
+node = "24.12.0"
+
+# Use the current stable pnpm version
+pnpm = "10.15.1"
+
+[env]
+# Optional: preferred defaults
+NODE_ENV = "development"
