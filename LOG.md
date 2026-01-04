@@ -38,3 +38,5 @@
 
 # 2026-01-04
 - Printing? I needed to print something for a trip, and was astonished to find that my little toner printer magically showed up and worked with no installation or work at all. This has come a long way since having to install CUPS.
+- Okay actually, it was kind of buggy, and there was a long saga of figuring out its IP so that it didn't use some dynamic resolution thing that was super flaky
+- Added a simple script to make it even easier to update the log
