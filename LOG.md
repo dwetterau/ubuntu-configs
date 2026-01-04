@@ -33,3 +33,5 @@
 # 2026-01-03
 - Moved .zshrc into the repo, and setup the same symlink thing for it
 - I also had to install a few things manually: sqlite3 dev headers, imagemagick, and pillow (PIL)
+- Then I wanted a keyboard shortcut to switch audio from headphones to speakers. Chat did a good job, but I had to apt install pulseaudio-utils too. 
+- Added a bin/ to this repo, to put scripts like this into. Mapped this to Super + G via the UI
