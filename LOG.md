@@ -29,3 +29,7 @@
 - Generated SSH keys, added them to Github
 - Setup a vimrc, made a script to symlink it from homedir properly
 - Setup a mise config for node, python, uv
+
+# 2026-01-03
+- Moved .zshrc into the repo, and setup the same symlink thing for it
+- I also had to install a few things manually: sqlite3 dev headers, imagemagick, and pillow (PIL)

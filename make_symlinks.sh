@@ -46,4 +46,7 @@ create_symlink "$SCRIPT_DIR/.vimrc" "$HOME_DIR/.vimrc" ".vimrc"
 # Create symlink for mise.toml
 create_symlink "$SCRIPT_DIR/mise.toml" "$HOME_DIR/mise.toml" "mise.toml"
 
+# Create symlink for .zshrc
+create_symlink "$SCRIPT_DIR/.zshrc" "$HOME_DIR/.zshrc" ".zshrc"
+
 echo "Symlink setup complete!"

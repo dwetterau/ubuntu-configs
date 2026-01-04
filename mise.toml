@@ -5,4 +5,4 @@ python = "latest"
 uv = "latest"
 
 [env]
-NODE_ENV = "development"
+# NODE_ENV = "development"
