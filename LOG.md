@@ -35,3 +35,6 @@
 - I also had to install a few things manually: sqlite3 dev headers, imagemagick, and pillow (PIL)
 - Then I wanted a keyboard shortcut to switch audio from headphones to speakers. Chat did a good job, but I had to apt install pulseaudio-utils too. 
 - Added a bin/ to this repo, to put scripts like this into. Mapped this to Super + G via the UI
+
+# 2026-01-04
+- Printing? I needed to print something for a trip, and was astonished to find that my little toner printer magically showed up and worked with no installation or work at all. This has come a long way since having to install CUPS.
