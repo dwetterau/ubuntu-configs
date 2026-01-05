@@ -40,3 +40,5 @@
 - Printing? I needed to print something for a trip, and was astonished to find that my little toner printer magically showed up and worked with no installation or work at all. This has come a long way since having to install CUPS.
 - Okay actually, it was kind of buggy, and there was a long saga of figuring out its IP so that it didn't use some dynamic resolution thing that was super flaky
 - Added a simple script to make it even easier to update the log
+- Ah my migration off of WSL wasn't as clean as I thought. I wanted the projects I had there, but when I tried to restart the resized image, the WSL\system.vhd" file apparently was corrupted. ChatGPT was pretty bad at fixing this one, but the internet had some good advice (download the .msi file for the same version, and run a repair command with it).
+- I was getting somewhat mysterious messages about an update from 2011 -> 2023 involving UEFI, which is weird because I bought the parts for this computer in 2022. Oh wow, I guess this computer is older than I thought. Anyway, Chat opened my eyes to `fwupdmgr`, and walked me through updating the CA
