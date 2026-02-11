@@ -1,0 +1,7 @@
+{
+  "uuid": "no-shutdown-delay@local",
+  "name": "No Shutdown Delay",
+  "description": "Removes the 60 second shutdown countdown",
+  "shell-version": ["45", "46", "47"],
+  "version": 1
+}
