@@ -42,3 +42,13 @@
 - Added a simple script to make it even easier to update the log
 - Ah my migration off of WSL wasn't as clean as I thought. I wanted the projects I had there, but when I tried to restart the resized image, the WSL\system.vhd" file apparently was corrupted. ChatGPT was pretty bad at fixing this one, but the internet had some good advice (download the .msi file for the same version, and run a repair command with it).
 - I was getting somewhat mysterious messages about an update from 2011 -> 2023 involving UEFI, which is weird because I bought the parts for this computer in 2022. Oh wow, I guess this computer is older than I thought. Anyway, Chat opened my eyes to `fwupdmgr`, and walked me through updating the CA
+
+# 2026-01-24
+- I wanted a clock on my second monitor, which gnome doesn't support.
+- Installed the gnome-shell-extensions + extension-manager
+- Installed "Dash to Panel" which then solved the problem, but also made this look a lot like windows. I'll see if I like it in the long run.
+- Also if I full screen a window, it buggily goes away
+
+# 2026-01-25
+- Okay, I finally found the settings for Dash to Panel, which let me put it back on the left.
+- Every shutdown of the desktop still makes Chrome say it exited uncleanly, so I tried setting "DefaultTimeoutStopSec=30s" in /etc/systemd/user.conf.d/timeout.conf
