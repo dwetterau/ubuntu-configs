@@ -52,3 +52,16 @@
 # 2026-01-25
 - Okay, I finally found the settings for Dash to Panel, which let me put it back on the left.
 - Every shutdown of the desktop still makes Chrome say it exited uncleanly, so I tried setting "DefaultTimeoutStopSec=30s" in /etc/systemd/user.conf.d/timeout.conf
+
+# 2026-02-10
+- I think Google Chrome doesn't complain about shutdown if I let it do the 60s timer, but I want to not wait 60s
+- To tweak this I needed to implement a gnome-shell extension, which gpt 5.2 oneshot just fine
+
+# 2026-02-15
+- I want to have cursor-cli to help manage things on the machine, like freeing up disk space and summarizing my disk usage
+- Weird that this didn't come with installing cursor's GUI as a .deb
+- I also have tried to show the date in the horizontal taskbar, but have not yet been successful, bummer.
+- My shutdown extension also wasn't working - it was because GPT5.2 hallucinated an older version of gnome than the one I'm using
+- Installing plex - this was pretty easy, but did have to add the sources.d entry myself
+- Wanted to move the notification position, so I installed the "Just perfection" extension, goofy.
+- I used cursor agent to tell me how to mount my drives via fstab instead of gnome, which seems better for other apps that want consistent paths to be there.
