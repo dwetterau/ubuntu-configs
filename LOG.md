@@ -65,3 +65,11 @@
 - Installing plex - this was pretty easy, but did have to add the sources.d entry myself
 - Wanted to move the notification position, so I installed the "Just perfection" extension, goofy.
 - I used cursor agent to tell me how to mount my drives via fstab instead of gnome, which seems better for other apps that want consistent paths to be there.
+
+# 2026-03-01
+- I wish I could say Ubuntu was going great, but honestly it's far from perfect. Many of my attempted fixes haven't actually worked in practice.
+- Lately, the system hasn't been able to suspend or resume - so I had Cursor CLI investigate, and it recommended switching from "deep" suspend to "s2idle"
+
+# 2026-04-01
+- Chrome has started having a nasty video playback problem on some sites: certain HTML5 video players and x.com can suddenly peg a ton of CPU, make the video crawl, garble the audio, and sometimes crash the browser.
+- The first fix Cursor recommended, that we are trying is to force Chrome onto the X11/XWayland path with `--ozone-platform=x11`, via the desktop launcher override, while still keeping GPU acceleration available.
